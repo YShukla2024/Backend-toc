@@ -21,6 +21,7 @@ class GroqLLM:
                 }
             ],
             temperature=0.3,
+            max_completion_tokens=8192,
             response_format={"type": "json_object"}
         )
 
