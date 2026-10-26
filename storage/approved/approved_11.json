@@ -1,0 +1,136 @@
+{
+  "title": "Power BI Training",
+  "duration": "5 Days",
+  "description": "Enterprise-focused training covering real-world implementation of Power BI.",
+  "objectives": [
+    "Build production-ready solutions using Power BI",
+    "Apply enterprise best practices",
+    "Design scalable and maintainable systems"
+  ],
+  "entry_profile": [
+    "Experience in software development, data, or IT systems",
+    "Familiarity with programming or enterprise tools",
+    "Understanding of deployment or system workflows"
+  ],
+  "methodology": [
+    "Instructor-led sessions",
+    "Hands-on labs",
+    "Real-world use cases"
+  ],
+  "hardware_requirements": [
+    "Laptop with minimum 16GB RAM",
+    "Stable internet connection"
+  ],
+  "software_requirements": [
+    "Power BI Desktop",
+    "Power BI Service",
+    "Microsoft Copilot Studio"
+  ],
+  "course_contents": [
+    {
+      "day": 1,
+      "sections": [
+        {
+          "title": "Module 1: Introduction to Power BI",
+          "topics": [
+            "Getting started with Power BI",
+            "Power BI Desktop vs. Power BI Service",
+            "Power BI features and capabilities"
+          ]
+        },
+        {
+          "title": "Module 2: Data Preparation in Power BI",
+          "topics": [
+            "Getting data in Power BI",
+            "Cleaning, transforming, and loading data in Power BI",
+            "Data modeling in Power BI"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "sections": [
+        {
+          "title": "Module 3: Data Modeling in Power BI",
+          "topics": [
+            "Creating data models in Power BI",
+            "Using DAX to create measures and calculated columns",
+            "Data modeling best practices in Power BI"
+          ]
+        },
+        {
+          "title": "Module 4: Reporting in Power BI",
+          "topics": [
+            "Creating reports in Power BI",
+            "Using visualizations and formatting options",
+            "Report best practices in Power BI"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "sections": [
+        {
+          "title": "Module 5: Deploying and Managing Power BI",
+          "topics": [
+            "Creating and managing workspaces in Power BI",
+            "Distributing and managing content in Power BI",
+            "Row-Level Security in Power BI"
+          ]
+        },
+        {
+          "title": "Module 6: Advanced Power BI Topics",
+          "topics": [
+            "Using Power BI with other Microsoft tools",
+            "Advanced data modeling and reporting techniques",
+            "Power BI best practices for large-scale implementations"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "sections": [
+        {
+          "title": "Module 7: Power BI and AI",
+          "topics": [
+            "Using Power BI with Microsoft Copilot Studio",
+            "Creating agents in Microsoft Copilot Studio",
+            "Integrating Power BI with AI and machine learning"
+          ]
+        },
+        {
+          "title": "Module 8: Power BI Security and Governance",
+          "topics": [
+            "Securing Power BI reports and dashboards",
+            "Implementing row-level security in Power BI",
+            "Governance best practices for Power BI"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "sections": [
+        {
+          "title": "Module 9: Power BI Best Practices and Troubleshooting",
+          "topics": [
+            "Power BI best practices for performance optimization",
+            "Troubleshooting common Power BI issues",
+            "Power BI best practices for large-scale implementations"
+          ]
+        },
+        {
+          "title": "Module 10: Power BI Advanced Topics",
+          "topics": [
+            "Using Power BI with other Microsoft tools",
+            "Advanced data modeling and reporting techniques",
+            "Power BI best practices for large-scale implementations"
+          ]
+        }
+      ]
+    }
+  ]
+}

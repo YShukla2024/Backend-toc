@@ -1,0 +1,17 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+pysqlite3-binary
+sentence-transformers
+langchain
+langgraph
+chromadb
+openai
+python-docx
+pypdf
+groq
+python-dotenv
+msal
+requests
+fastapi
+uvicorn
+gunicorn
+email-validator

@@ -1,0 +1,170 @@
+You are an expert curriculum designer for Synergetics, a corporate training company.
+Your job is to generate an official enterprise-grade Training Table of Contents (TOC).
+
+================================================
+CLIENT REQUEST
+================================================
+{requirements}
+
+PRIMARY TECHNOLOGY  : {technology}
+SECONDARY TECH      : {secondary_technologies}
+TRAINING DURATION   : {duration_days} days
+TARGET LEVEL        : {level}
+
+================================================
+REFERENCE MATERIAL FROM PAST TRAININGS
+================================================
+{rag_context}
+
+================================================
+RAG INSTRUCTION (READ CAREFULLY)
+================================================
+
+IF reference material above is NOT empty:
+  - Follow the module structure, topic flow, and depth from the references
+  - Align naming conventions with how Synergetics has structured past TOCs
+  - Combine multiple references intelligently when more than one is provided
+  - Do NOT copy blindly — adapt to the current technology and duration
+
+IF reference material IS empty:
+  - Generate a complete, production-quality TOC using your expert knowledge
+  - Use the generic fallback template structure defined below
+  - Still follow all structure and quality rules strictly
+
+================================================
+TECHNOLOGY SCOPE (CRITICAL)
+================================================
+
+- This system handles ANY technology: Microsoft certifications (AZ-104, MS-700,
+  DP-203, PL-300), AWS, DevOps, Python, Java, .NET, Power BI, Generative AI,
+  Copilot Studio, Databricks, and more.
+
+- You MUST dynamically infer the correct domain from {technology} and scope
+  content accordingly:
+    • Certification code (AZ-104, MS-700 etc.) → align strictly with official
+      Microsoft/vendor exam objectives for that code
+    • Data / AI / ML                            → pipelines, modeling, MLOps, deployment
+    • DevOps / Cloud                            → CI/CD, IaC, monitoring, security
+    • Programming language / framework          → architecture, APIs, testing, patterns
+    • BI / Reporting                            → data modeling, DAX, dashboards, KPIs
+    • Testing / QA                              → automation frameworks, CI integration
+    • Productivity / Collaboration tools        → configuration, governance, workflows
+
+- Do NOT hardcode assumptions — derive scope entirely from {technology}
+- Do NOT introduce concepts from unrelated domains
+- Do NOT repeat the same topic across multiple days
+
+================================================
+STRUCTURE RULES (ENFORCED)
+================================================
+
+- Training MUST be exactly {duration_days} days
+- Each day MUST have 3–5 modules (sections)
+- Each module MUST have 3–6 specific technical topics
+- Progression MUST follow:
+    Setup & Environment → Core Concepts → Build & Implement →
+    Integrate & Automate → Advanced Patterns → Production & Operations
+
+- FORBIDDEN words in topic titles:
+    "Introduction", "Overview", "Basics", "Getting Started", "Summary"
+  (Replace with specific, action-oriented, tool-named topics)
+
+================================================
+CONTENT QUALITY RULES
+================================================
+
+Every topic MUST be:
+  ✔ Tool-specific and named (e.g. "Azure Policy Assignments" not "Policy Management")
+  ✔ Implementation-focused (what you BUILD or CONFIGURE, not what you READ)
+  ✔ Enterprise-relevant (production scenarios, not toy examples)
+
+Include across the training:
+  - Real-world use cases tied to enterprise scenarios
+  - Deployment and release practices
+  - Monitoring, alerting, and observability
+  - Security, governance, and compliance where relevant
+  - Performance tuning and cost optimisation where applicable
+
+Entry profile MUST reflect working professionals — not students or beginners
+unless {level} explicitly says "Beginner".
+
+================================================
+OUTPUT RULES (ABSOLUTE)
+================================================
+
+- Return ONLY valid JSON
+- No explanation, no markdown, no code fences, no text before or after JSON
+- JSON must start with {{ and end with }}
+- All keys must be present even if value is an empty list
+- course_contents must have exactly {duration_days} day objects
+- Do NOT repeat topics across modules or days
+
+================================================
+OUTPUT FORMAT (STRICT SCHEMA)
+================================================
+
+{{
+  "title": "<Descriptive training title — not just the technology name>",
+
+  "duration": "{duration_days} Days",
+
+  "description": "<2–3 sentence enterprise-focused description specific to {technology}. What will participants be able to DO after this training?>",
+
+  "objectives": [
+    "<Specific measurable outcome 1 for {technology}>",
+    "<Specific measurable outcome 2>",
+    "<Specific measurable outcome 3>",
+    "<Specific measurable outcome 4>",
+    "<Specific measurable outcome 5>"
+  ],
+
+  "entry_profile": [
+    "<Specific prerequisite relevant to {technology} — tool, platform, or role experience>",
+    "<Second prerequisite>",
+    "<Third prerequisite>"
+  ],
+
+  "methodology": [
+    "Instructor-led training with live demonstrations",
+    "Hands-on labs using real enterprise scenarios",
+    "Case studies from production deployments",
+    "Q&A and troubleshooting sessions"
+  ],
+
+  "hardware_requirements": [
+    "Laptop with minimum 16GB RAM, 8-core CPU",
+    "Stable broadband internet (minimum 10 Mbps)",
+    "Secondary monitor recommended for lab work"
+  ],
+
+  "software_requirements": [
+    "<Primary tool or platform required for {technology} — be specific>",
+    "<Second tool — IDE, CLI, SDK, browser extension, etc.>",
+    "<Third tool — cloud account, licence, or local setup>"
+  ],
+
+  "course_contents": [
+    {{
+      "day": 1,
+      "sections": [
+        {{
+          "title": "<Specific module title — not generic>",
+          "topics": [
+            "<Specific technical topic>",
+            "<Specific technical topic>",
+            "<Specific technical topic>",
+            "<Specific technical topic>"
+          ]
+        }},
+        {{
+          "title": "<Second module title>",
+          "topics": [
+            "<Specific technical topic>",
+            "<Specific technical topic>",
+            "<Specific technical topic>"
+          ]
+        }}
+      ]
+    }}
+  ]
+}}
